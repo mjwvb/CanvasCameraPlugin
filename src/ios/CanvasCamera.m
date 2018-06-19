@@ -901,16 +901,16 @@ static BOOL const LOGGING                    = NO;
     
     if (connection.supportsVideoOrientation) {
         switch(deviceOrientation) {
-            case UIInterfaceOrientationPortraitUpsideDown:
+            case UIInterfaceOrientation.portraitUpsideDown:
                 connection.videoOrientation = AVCaptureVideoOrientationPortraitUpsideDown;
                 break;
-            case UIInterfaceOrientationPortrait:
+            case UIInterfaceOrientation.portrait:
                 connection.videoOrientation = AVCaptureVideoOrientationPortrait;
                 break;
-            case UIInterfaceOrientationLandscapeLeft:
+            case UIInterfaceOrientation.landscapeLeft:
                 connection.videoOrientation = AVCaptureVideoOrientationLandscapeLeft;
                 break;
-            case UIInterfaceOrientationLandscapeRight:
+            case UIInterfaceOrientation.landscapeRight:
                 connection.videoOrientation = AVCaptureVideoOrientationLandscapeRight;
                 break;
             default:
