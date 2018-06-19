@@ -897,13 +897,9 @@ static BOOL const LOGGING                    = NO;
 }
 
 - (void) setVideoOrientation:(AVCaptureConnection *)connection {
-    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
     UIInterfaceOrientation statusBarOrientation = [UIApplication sharedApplication].statusBarOrientation;
     
     if (connection.supportsVideoOrientation) {
-        connection.videoOrientation = AVCaptureVideoOrientationPortrait;
-        return;
-        
         switch(deviceOrientation) {
             case UIInterfaceOrientationPortraitUpsideDown:
                 connection.videoOrientation = AVCaptureVideoOrientationPortraitUpsideDown;
