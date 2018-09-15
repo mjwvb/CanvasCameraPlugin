@@ -997,7 +997,7 @@ static BOOL const LOGGING                    = NO;
             if (LOGGING) NSLog(@"[ERROR][CanvasCamera][deleteCachedImageFiles] Could not get temporary folder contents : %@.", error.localizedDescription);
         } else {
             if (filesList.count > 0) {
-                filesList = [filesList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"self ENDSWITH '-%@.jpg", self.filenameSuffix]]];
+                filesList = [filesList filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"self ENDSWITH '-%@.jpg'", self.filenameSuffix]]];
                 if (filesList.count > 0) {
                     BOOL deleted;
                     for (NSString* file in filesList) {
